@@ -770,7 +770,7 @@ body {
 }
 
 .perigo-frio {
-  background-color: #5c6bc0;
+    background-color: #ff7043;
 }
 
 .perigo-quente {
@@ -778,7 +778,7 @@ body {
 }
 
 .alerta-frio {
-  background-color: #42a5f5;
+    background-color: #ffee58;
 }
 
 .alerta-quente {
@@ -790,7 +790,7 @@ body {
 }
 
 .perigo-seco {
-    background-color: #5c6bc0;
+    background-color: #ff7043;
 }
   
 .perigo-umido {
@@ -798,7 +798,7 @@ body {
 }
   
 .alerta-seco {
-    background-color: #42a5f5;
+    background-color: #ffee58;
 }
   
 .alerta-umido {
@@ -810,7 +810,7 @@ body {
 }
 
 .perigo-escuro {
-    background-color: #5c6bc0;
+    background-color: #ff7043;
 }
   
 .perigo-claro {
@@ -818,7 +818,7 @@ body {
 }
   
 .alerta-escuro {
-    background-color: #42a5f5;
+    background-color: #ffee58;
 }
   
 .alerta-claro {
@@ -965,7 +965,7 @@ body {
 }
 
 .tituloGraficos {
-  color: rgb(216, 216, 216);
+  color: var(--color-dark);
   display: flex;
   justify-content: center;
 }
@@ -976,7 +976,7 @@ body {
   font-weight: 600;
   font-size: 18px;
   padding: 10px 15px;
-  color: #e6005a;
+  color: var(--color-dark);
   background-color: var(--color-light);
   border-radius: var(--border-radius-1);
   margin: 5px;

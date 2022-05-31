@@ -86,9 +86,6 @@
                         <span class="material-icons-sharp active">light_mode</span>
                         <span class="material-icons-sharp">dark_mode</span>
                     </div>
-                    <div class="date">
-                        <input type="date">
-                    </div>
                 </div><br>
                 <div class="legenda-pai">
                     <div class="legenda">
@@ -282,12 +279,12 @@
         if (temperatura >= limitesTemp.muito_quente) {
             classe_temperatura = 'cor-alerta perigo-quente';
             console.log("caiu no 1")
-            alert("Perigo está muito quente")
+            // alert("Perigo está muito quente")
         }
         else if (temperatura < limitesTemp.muito_quente && temperatura >= limitesTemp.quente) {
             classe_temperatura = 'cor-alerta alerta-quente';
             console.log("caiu no 2")
-            alert("Atenção está esquentando")
+        //     alert("Atenção está esquentando")
         }
         else if (temperatura < limitesTemp.quente && temperatura > limitesTemp.frio) {
             classe_temperatura = 'cor-alerta ideal_temp';
@@ -296,12 +293,12 @@
         else if (temperatura <= limitesTemp.frio && temperatura > limitesTemp.muito_frio) {
             classe_temperatura = 'cor-alerta alerta-frio';
             console.log("caiu no 4")
-            alert("Atenção está esfriando")
+        //     alert("Atenção está esfriando")
         }
         else if (temperatura < limitesTemp.muito_frio) {
             classe_temperatura = 'cor-alerta perigo-frio';
             console.log("caiu no 5")
-            alert("Perigo está muito frio")
+            // alert("Perigo está muito frio")
 
         }
 
@@ -309,12 +306,12 @@
         if (umidade >= limitesUmid.muito_umido) {
             classe_umidade = 'cor-alerta perigo-umido';
             console.log("caiu no 1")
-            alert("Perigo está muito umido")
+            // alert("Perigo está muito umido")
         }
         else if (umidade < limitesUmid.muito_umido && umidade >= limitesUmid.umido) {
             classe_umidade = 'cor-alerta alerta-umido';
             console.log("caiu no 2")
-            alert("Alerta está umido")
+            // alert("Alerta está umido")
 
         }
         else if (umidade < limitesUmid.umido && umidade > limitesUmid.seco) {
@@ -324,28 +321,28 @@
         else if (umidade <= limitesUmid.seco && umidade > limitesUmid.muito_seco) {
             classe_umidade = 'cor-alerta alerta-seco';
             console.log("caiu no 4")
-            alert("Alerta está seco")
+        //     alert("Alerta está seco")
         }
 
         else if (umidade < limitesUmid.muito_seco) {
             classe_umidade = 'cor-alerta perigo-seco';
             console.log("caiu no 5")
-            alert("Pergio está muito umido")
+            // alert("Pergio está muito umido")
         }
 
         if (luminosidade >= limitesLumin.muito_claro) {
             classe_luminosidade = 'cor-alerta perigo-claro';
             console.log("caiu no 1")
-            alert("Perigo está muito luminoso")
+            // alert("Perigo está muito luminoso")
         }
 
         else if (luminosidade < limitesLumin.muito_claro && luminosidade >= limitesLumin.claro) {
             classe_luminosidade = 'cor-alerta alerta-claro';
             console.log("caiu no 2")
-            alert("Alerta está luminoso")
+        //     alert("Alerta está luminoso")
         }
 
-        else if (uminosidade < limitesLumin.muito_claro && luminosidade >= limitesLumin.claro) {
+        else if (luminosidade < limitesLumin.muito_claro && luminosidade >= limitesLumin.claro) {
             classe_luminosidade = 'cor-alerta ideal_lumin';
             console.log("caiu no 3")
         }
@@ -353,69 +350,68 @@
         else if (luminosidade <= limitesLumin.escuro && luminosidade > limitesLumin.muito_escuro) {
             classe_luminosidade = 'cor-alerta alerta-escuro';
             console.log("caiu no 4")
-            alert("Alerta está escuro")
+        //     alert("Alerta está escuro")
         }
 
         else if (luminosidade < limitesLumin.muito_escuro) {
             classe_luminosidade = 'cor-alerta perigo-escuro';
             console.log("caiu no 5")
-            alert("Perigo está muito escuro")
+            // alert("Perigo está muito escuro")
         }
 
-        var tempcard;
-        var umidcard;
-        var lumicard;
+       
 
         if (idEstufa == 1) {
             tempEstu1.innerHTML = temperatura + "°C";
             umidEstu1.innerHTML = umidade + "%";
             lumiEstu1.innerHTML = luminosidade;
 
-            tempcard1 = tempcard_1;
-            umidcard1 = umidcard_1;
-            lumicard1 = lumicard_1;
+            tempcard = tempcard_1;
+            umidcard = umidcard_1;
+            lumicard = lumicard_1;
         }
         else if (idEstufa == 2) {
             tempEstu2.innerHTML = temperatura + "°C";
             umidEstu2.innerHTML = umidade + "%";
             lumiEstu2.innerHTML = luminosidade;
-            tempcard2 = tempcard_2;
-            umidcard2 = umidcard_2;
-            lumicard2 = lumicard_2;
+            tempcard = tempcard_2;
+            umidcard = umidcard_2;
+            lumicard = lumicard_2;
 
         } else if (idEstufa == 3) {
             tempEstu3.innerHTML = temperatura + "°C";
             umidEstu3.innerHTML = umidade + "%";
             lumiEstu3.innerHTML = luminosidade;
-            tempcard3 = tempcard_3;
-            umidcard3 = umidcard_3;
-            lumicard3 = lumicard_3;
+            tempcard = tempcard_3;
+            umidcard = umidcard_3;
+            lumicard = lumicard_3;
 
         } else if (idEstufa == 4) {
             tempEstu4.innerHTML = temperatura + "°C";
             umidEstu4.innerHTML = umidade + "%";
             lumiEstu4.innerHTML = luminosidade;
-            tempcard4 = tempcard_4;
-            umidcard4 = umidcard_4;
-            lumicard4 = lumicard_4;
+            tempcard = tempcard_4;
+            umidcard = umidcard_4;
+            lumicard = lumicard_4;
 
         }
 
         // alterando
-        tempcard1 = classe_temperatura;
-        umidcard1 = classe_umidade;
-        lumicard1 = classe_luminosidade;
+        tempcard_1.className = classe_temperatura;
+        umidcard_1.className = classe_umidade;
+        lumicard_1.className = classe_luminosidade;
 
-        tempcard2 = classe_temperatura;
-        umidcard2 = classe_umidade;
-        lumicard2 = classe_luminosidade;
+        tempcard_2.className = classe_temperatura;
+        umidcard_2.className = classe_umidade;
+        lumicard_2.className = classe_luminosidade;
 
-        tempcard3 = classe_temperatura;
-        umidcard3 = classe_umidade;
-        lumicard3 = classe_luminosidade;
+        tempcard_3.className = classe_temperatura;
+        umidcard_3.className = classe_umidade;
+        lumicard_3.className = classe_luminosidade;
 
-        tempcard4 = classe_temperatura;
-        umidcard4 = classe_umidade;
-        lumicard4 = classe_luminosidade;
+        tempcard_4.className = classe_temperatura;
+        umidcard_4.className = classe_umidade;
+        lumicard_4.className = classe_luminosidade;
+
     }
 </script>

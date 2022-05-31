@@ -1,6 +1,9 @@
 CREATE DATABASE greenhouse;
-
+drop database greenhouse;
 USE greenhouse;
+
+select * from usuario;
+select * from estufa;
 
 -- MY SQL WORKBENCH
 CREATE TABLE usuario(
@@ -125,50 +128,50 @@ select MAX(dht11_temperatura) as temperatura,
                         from medida where fk_aquario = 1
                     order by id desc limit 1;
 
-MYSQL SERVER
+-- MYSQL SERVER
 
-CREATE TABLE usuario(
-	idUsuario INT PRIMARY KEY IDENTITY(1,1),
-    nome_razaosocial VARCHAR(45),
-    dtNasc DATE,
-    tipo CHAR(2),
-    cpf_cnpj VARCHAR(14),
-    CHECK (cpf_cnpj in('PF', 'PJ')),
-    email VARCHAR(60),
-    senha VARCHAR(45),
-    fkDependente INT,
-    FOREIGN KEY (fkDependente) REFERENCES usuario(idUsuario)
-);
+-- CREATE TABLE usuario(
+-- 	idUsuario INT PRIMARY KEY IDENTITY(1,1),
+--     nome_razaosocial VARCHAR(45),
+--     dtNasc DATE,
+--     tipo CHAR(2),
+--     cpf_cnpj VARCHAR(14),
+--     CHECK (cpf_cnpj in('PF', 'PJ')),
+--     email VARCHAR(60),
+--     senha VARCHAR(45),
+--     fkDependente INT,
+--     FOREIGN KEY (fkDependente) REFERENCES usuario(idUsuario)
+-- );
 
-CREATE TABLE estufa(
-	idEstufa INT PRIMARY KEY IDENTITY(1,1),
-    produto VARCHAR(45),
-    tempIdeal DECIMAL,
-    umidIdeal DECIMAL,
-    lumiIdeal DECIMAL,
-    comprimento DECIMAL,
-    largura DECIMAL
-);
+-- CREATE TABLE estufa(
+-- 	idEstufa INT PRIMARY KEY IDENTITY(1,1),
+--     produto VARCHAR(45),
+--     tempIdeal DECIMAL,
+--     umidIdeal DECIMAL,
+--     lumiIdeal DECIMAL,
+--     comprimento DECIMAL,
+--     largura DECIMAL
+-- );
 
-CREATE TABLE acesso(
-	idAcesso INT IDENTITY(1,1),
-    fkUsuario INT,
-    fkEstufa INT,
-    PRIMARY KEY(idAcesso, fkUsuario, fkEstufa),
-    momento DATETIME,
-    FOREIGN KEY(fkUsuario) REFERENCES usuario(idUsuario),
-    FOREIGN KEY(fkEstufa) REFERENCES estufa(idEstufa)
-);
+-- CREATE TABLE acesso(
+-- 	idAcesso INT IDENTITY(1,1),
+--     fkUsuario INT,
+--     fkEstufa INT,
+--     PRIMARY KEY(idAcesso, fkUsuario, fkEstufa),
+--     momento DATETIME,
+--     FOREIGN KEY(fkUsuario) REFERENCES usuario(idUsuario),
+--     FOREIGN KEY(fkEstufa) REFERENCES estufa(idEstufa)
+-- );
 
-CREATE TABLE dado(
-	idDado INT PRIMARY KEY IDENTITY(1,1),
-    fkEstufa INT,
-    dht11Umidade DECIMAL,
-    lm35Temperatura DECIMAL,
-    luminosidade DECIMAL,
-    momento DATETIME DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY(fkEstufa) REFERENCES estufa(idEstufa)
-);
+-- CREATE TABLE dado(
+-- 	idDado INT PRIMARY KEY IDENTITY(1,1),
+--     fkEstufa INT,
+--     dht11Umidade DECIMAL,
+--     lm35Temperatura DECIMAL,
+--     luminosidade DECIMAL,
+--     momento DATETIME DEFAULT CURRENT_TIMESTAMP,
+--     FOREIGN KEY(fkEstufa) REFERENCES estufa(idEstufa)
+-- );
 
 
 
