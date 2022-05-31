@@ -968,6 +968,7 @@ body {
   color: rgb(216, 216, 216);
   display: flex;
   justify-content: center;
+  color: #66e213;
 }
 
 .btn-chart {
@@ -976,7 +977,7 @@ body {
   font-weight: 600;
   font-size: 18px;
   padding: 10px 15px;
-  color: #e6005a;
+  color: #66e213;
   background-color: var(--color-light);
   border-radius: var(--border-radius-1);
   margin: 5px;
